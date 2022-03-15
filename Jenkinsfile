@@ -9,12 +9,12 @@ pipeline{
     stages{
         stage('Checkout'){
             steps{
-            checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: '1', url: 'https://github.com/GauravBluepi123/HelloWorld']]])
+            checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: '1', url: 'https://github.com/GauravBluepi123/SpringBoot-Rest-Swagger-App']]])
             }
         }
         stage('Build'){
             steps{
-            sh 'mvn clean install -f GauravBluepi123/SpringBoot-Rest-Swagger-App.git'
+            sh 'mvn clean install -f SpringBoot-Rest-Swagger-App/pom.xml'
             }
         }
     }
