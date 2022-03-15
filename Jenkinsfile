@@ -14,7 +14,7 @@ pipeline{
         }
         stage('Build'){
             steps{
-            sh 'mvn clean install -f HelloWorld/blob/master/Hello.java'
+            sh 'mvn clean install -f GauravBluepi123/SpringBoot-Rest-Swagger-App.git'
             }
         }
     }
