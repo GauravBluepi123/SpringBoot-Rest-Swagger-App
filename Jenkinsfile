@@ -16,7 +16,7 @@ pipeline{
         stage('Build'){
             steps{
             sh 'pwd'
-            sh 'mvn clean install -f SpringBoot-Rest-Swagger-App/pom.xml'
+            sh 'mvn clean install -f pom.xml'
             }
         }
     }
